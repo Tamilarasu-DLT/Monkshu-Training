@@ -2,14 +2,63 @@
 <html>
 <head>
 	<title>News Articles</title>
+	<style>
+		table {
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		th, td {
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even){background-color: #f2f2f2}
+
+		th {
+		  background-color: #15A4D0;
+		  color: white;
+		}
+		.card {
+		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		  transition: 0.3s;
+		  width: 28%;
+		  margin: 15px;
+		}
+
+		.card:hover {
+		  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+
+		.card-body {
+		  padding: 2px 16px;
+		}
+
+		.card-view {
+			display: flex;
+		}
+
+		.card-footer {
+			padding: 2px 16px;
+			margin-bottom: 20px;
+			/*position: */
+		}
+
+		.alignleft {
+			float: left;
+		}
+		.alignright {
+			float: right;
+		}
+	</style>
 </head>
 <body>
 	<div class="grid-view">
 		<h1 align="center">Grid View</h1>
-		<table border="1">
+		<table>
 			<tr>
-				<th>Source</th>
-				<th>Author</th>
+				<th width="10%">Source</th>
+				<th width="8%">Author</th>
 				<th>Title</th>
 				<th>Description</th>
 				<th>URL</th>
@@ -59,8 +108,52 @@
 		</table>
 	</div>
 
+	<h1 align="center">Card View </h1>
 	<div class="card-view">
-		
+		<div class="card">
+			<img src="https://editorial.fxstreet.com/images/Macroeconomics/Events/Coronavirus/coronavirus4_Large.jpg" alt="Avatar" style="width:100%">
+			<div class="card-body">
+				<h4>Forex Today: Dollar bounces amid vaccine, stimulus concerns ahead of Nonfarm Payrolls</h4>
+				<p>Here is what you need to know on Friday, December 4: Markets are mixed and the dollar is off Thursday's lows as traders await the all-important Nonfar</p>
+			</div>
+			<div class="card-footer">
+				<a href="https://www.fxstreet.com/news/forex-today-dollar-bounces-amid-vaccine-stimulus-concerns-ahead-of-nonfarm-payrolls-202012040628"><h4 class="alignleft">FXStreet</h4></a>
+				<p class="alignright">Yohay Elam</p>
+			</div>
+		</div>
+		<div class="card">
+			<img src="https://s3.cointelegraph.com/uploads/2020-12/a5b22f66-0b5b-4962-be66-7ad38b057fff.jpg" alt="Avatar" style="width:100%">
+			<div class="card-body">
+				<h4>Every asset manager must understand Bitcoin — Erik Voorhees</h4>
+				<p>Shapeshift CEO Erik Voorhees believes Bitcoin is vastly superior to any other investment, citing its 7.8 million percent ROI over 10 years.</p>
+			</div>
+			<div class="card-footer">
+				<a href="https://cointelegraph.com/news/every-asset-manager-must-understand-bitcoin-erik-voorhees"><h4 class="alignleft">Cointelegraph</h4></a>
+				<p class="alignright">Joshua Mapperson</p>
+			</div>
+		</div>
+		<div class="card">
+			<img src="https://i.guim.co.uk/img/media/c090cd83408471d34aa1737ecbe2a87179cb7948/0_0_5000_3000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctbGl2ZS5wbmc&enable=upscale&s=a4e3b5245d64a10283f9ff27a7b782b2" alt="Avatar" style="width:100%">
+			<div class="card-body">
+				<h4>Coronavirus live news: Biden vows to get vaccinated in public as South Korea reports highest cases in nine months - The Guardian</h4>
+				<p>Biden will ask Americans to wear masks for his first 100 days in office; Italy approves Christmas restrictions; Iran’s cases top 1m</p>
+			</div>
+			<div class="card-footer">
+				<a href="https://www.economist.com/business/2020/12/05/salesforce-gets-some-slack"><h4 class="alignleft">The Guardian</h4></a>
+				<p class="alignright">Helen Sullivan</p>
+			</div>
+		</div>
+		<div class="card">
+			<img src="https://static.reuters.com/resources/r/?m=02&d=20201204&t=2&i=1543406222&r=LYNXMPEGB303M&w=800" alt="Avatar" style="width:100%">
+			<div class="card-body">
+				<h4>Trump administration adds China's SMIC and CNOOC to Defense blacklist - Reuters India</h4>
+				<p>The Trump administration on Thursday added China's top chipmaker, SMIC, and oil giant CNOOC to a blacklist of alleged Chinese military companies, a move likely to escalate tensions with Beijing before President-elect Joe Biden takes office.</p>
+			</div>
+			<div class="card-footer">
+				<a href="https://in.reuters.com/article/usa-china-military-companies-idINKBN28E07W"><h4 class="alignleft">Reuters</h4></a>
+				<p class="alignright">Alexandra Alper</p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
