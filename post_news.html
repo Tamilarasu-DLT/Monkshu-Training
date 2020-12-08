@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style/new_post.css">
+    <title>Post a news</title>
+  </head>
+  <body>
+
+  <h2 align="center">Post a news</h2>
+
+  <div>
+    <form id="newsform">
+      <label for="author">Author</label>
+      <input type="text" id="author" name="authorname" placeholder="Author name..">
+
+      <label for="source">Source</label>
+      <input type="text" id="source" name="sourcename" placeholder="News Source..">
+
+      <label for="url">URL</label>
+      <input type="text" id="url" name="newsurl" placeholder="Source URL..">
+
+      <label for="title">Title</label>
+      <input type="text" id="title" name="newstitle" placeholder="Title..">
+
+      <label for="desc">Description</label>
+      <textarea rows="4" cols="50" id="desc" name="newsdesc" placeholder="Description.." form="newsform"></textarea>
+    
+      <input type="button" onclick="sanitize()" value="Submit">
+    </form>
+  </div>
+
+  <script type="text/javascript" src="script/post_news.js"></script>
+  </body>
+</html>
