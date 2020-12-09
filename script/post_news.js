@@ -28,11 +28,9 @@ var validateInput = (id, value) => {
 		let val = value
 		let res = val.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
 	    if(res == null){
-	    	console.log("Its null")
 	        return false;
 	    }
 	    else{
-	    	console.log("Its true", res)
 	    	removeErrorBox(id)
 	        return true;
 	    }
@@ -78,7 +76,6 @@ addEvent(title)
 addEvent(desc)
 
 var isValid = () => {
-	console.log(validateInput(author.id, author.value), validateInput(source.id, source.value), validateInput(url.id, url.value), validateInput(title.id, title.value), validateInput(desc.id, desc.value)) 
 	if(validateInput(author.id, author.value) && validateInput(source.id, source.value) && validateInput(url.id, url.value) && validateInput(title.id, title.value) && validateInput(desc.id, desc.value)){
 		return true
 	}
