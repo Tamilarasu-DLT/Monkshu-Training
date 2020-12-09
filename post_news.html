@@ -9,7 +9,6 @@
   <h2 align="center">Post a news</h2>
 
   <div>
-    <form id="newsform">
       <label for="author">Author</label>
       <input type="text" id="author" name="authorname" placeholder="Author name..">
 
@@ -25,8 +24,7 @@
       <label for="desc">Description</label>
       <textarea rows="4" cols="50" id="desc" name="newsdesc" placeholder="Description.." form="newsform"></textarea>
     
-      <input type="button" onclick="sanitize()" value="Submit">
-    </form>
+      <input type="button" onclick="submit()" value="Submit">
   </div>
 
   <script type="text/javascript" src="script/post_news.js"></script>
