@@ -1,14 +1,14 @@
-var addErrorBox = (id) => {
+const addErrorBox = (id) => {
 	element = document.getElementById(id)
 	element.style.border = "1px solid red";
 }
 
-var removeErrorBox = (id) => {
+const removeErrorBox = (id) => {
 	element = document.getElementById(id)
 	element.style.border = "1px solid #ccc";
 }
 
-var validateInput = (id, value) => {
+const validateInput = (id, value) => {
 	if(id === "author" || id === "source"){
 		let len = value.length
 		let format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -46,7 +46,7 @@ var validateInput = (id, value) => {
 
 }
 
-var addEvent = (element) => {
+const addEvent = (element) => {
 	element.addEventListener('focusout', (event) => {
 		if(!validateInput(element.id, element.value)){
 			addErrorBox(element.id)
@@ -54,19 +54,19 @@ var addEvent = (element) => {
 	})
 }
 
-var sendData = (data) => {
-	var xmlhttp = new XMLHttpRequest()
-	var url = "localhost:8080/news"
+const sendData = (data) => {
+	let xmlhttp = new XMLHttpRequest()
+	let url = "localhost:8080/news"
 	// xmlhttp.open("POST", url)
 	// xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	// xmlhttp.send(JSON.stringify(data));
 }
 
-var author = document.getElementById("author")
-var source = document.getElementById("source")
-var url = document.getElementById("url")
-var title = document.getElementById("title")
-var desc = document.getElementById("desc")
+let author = document.getElementById("author")
+let source = document.getElementById("source")
+let url = document.getElementById("url")
+let title = document.getElementById("title")
+let desc = document.getElementById("desc")
 
 // Event handler adding
 addEvent(author)
@@ -75,20 +75,22 @@ addEvent(url)
 addEvent(title)
 addEvent(desc)
 
-var isValid = () => {
+const isValid = () => {
 	if(validateInput(author.id, author.value) && validateInput(source.id, source.value) && validateInput(url.id, url.value) && validateInput(title.id, title.value) && validateInput(desc.id, desc.value)){
 		return true
 	}
 	return false
 }
 
-var getData = () => {
-	data = {author: author.value, source: source.value, url: url.value, title: title.value, desc: desc.value}
+const getData = () => {
+	let data = {author: author.value, source: source.value, url: url.value, title: title.value, desc: desc.value}
+	return data
 }
 
-var submit = () => {
-	var data = getData()
+const submit = () => {
+	let data = getData()
 	if(isValid()){
+		console.log(data)
 		sendData(data)
 	}
 	else{
